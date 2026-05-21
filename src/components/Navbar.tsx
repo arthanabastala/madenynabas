@@ -10,7 +10,9 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-8">
         <div className="flex h-24 items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-            <img src="/logo.png" alt="made by nabas" className="h-6 w-auto" />
+            <span className="text-xl font-medium tracking-tight text-text-main">
+              made by <span className="text-accent-lime opacity-90">nabas</span>
+            </span>
           </a>
 
           {/* Desktop Nav */}
