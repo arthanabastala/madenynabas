@@ -121,19 +121,19 @@ function ProjectPreview({ project }: { project: typeof projects[0] }) {
 
 export function Projects() {
   return (
-    <section id="works" className="py-32 md:py-40 relative">
+    <section id="works" className="scroll-mt-24 py-12 md:py-16 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 flex items-baseline justify-between"
+          className="mb-10 md:mb-12 flex items-baseline justify-between"
         >
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Selected Concepts</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, idx) => {
             const isClickable = !!project.link;
             const cardProps = {

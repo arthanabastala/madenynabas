@@ -4,35 +4,35 @@ const steps = [
   {
     num: "01.",
     title: "Brief",
-    desc: "We define your goal, audience, and website needs."
+    desc: "We discuss your goals, audience, references, and website needs."
   },
   {
     num: "02.",
     title: "Direction",
-    desc: "I create the visual direction and page structure."
+    desc: "I create the visual direction, content structure, and page flow."
   },
   {
     num: "03.",
     title: "Design",
-    desc: "The interface is designed with clean hierarchy and modern aesthetics."
+    desc: "The website interface is designed with clean hierarchy and modern aesthetics."
   },
   {
     num: "04.",
     title: "Build",
-    desc: "The final website is developed and prepared for launch."
+    desc: "The final website is developed, optimized, and prepared for launch."
   }
 ];
 
 export function Process() {
   return (
-    <section id="process" className="py-32 md:py-40 relative">
+    <section id="process" className="scroll-mt-24 py-16 md:py-24 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight">How It Works</h2>
         </motion.div>

@@ -29,14 +29,14 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-32 md:py-40 relative">
+    <section id="faq" className="py-16 md:py-24 relative">
       <div className="mx-auto max-w-4xl px-8">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 md:mb-20"
+          className="mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight">FAQ</h2>
         </motion.div>
