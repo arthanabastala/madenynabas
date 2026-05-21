@@ -4,19 +4,30 @@ import { useState } from 'react';
 const projects = [
   {
     name: "ORIGINE",
+    label: "Concept Project",
     type: "Coffee Brand Website Concept",
     desc: "A dark, cinematic landing page concept for a modern specialty coffee brand.",
-    link: "https://originecoffe.vercel.app/"
+    link: "https://originecoffe.vercel.app/",
+    image: "/coffeweb.png",
+    cta: "View Demo"
   },
   {
     name: "FRAME",
-    type: "Portfolio Website Concept",
-    desc: "A clean personal website for creators, designers, and freelancers.",
+    label: "Personal Project",
+    type: "Portfolio Website",
+    desc: "A clean personal portfolio website built to present profile, skills, and selected works.",
+    link: "https://nabastalaport.vercel.app/",
+    image: "/portoweb.png",
+    cta: "View Website"
   },
   {
-    name: "LOCAL GOODS",
-    type: "UMKM Website Concept",
-    desc: "A simple business website with modern layout and clear product presentation.",
+    name: "MAC GLOBAL",
+    label: "Live Project",
+    type: "Business Website",
+    desc: "A modern business website for a local brand with clean product and company presentation.",
+    link: "https://macomunity.vercel.app/",
+    image: "/macweb.png",
+    cta: "View Website"
   }
 ];
 
@@ -89,10 +100,9 @@ function MockupFallback({ name }: { name: string }) {
 
 function ProjectPreview({ project }: { project: typeof projects[0] }) {
   const [imgError, setImgError] = useState(false);
-  const imagePath = project.name === "ORIGINE" ? "/coffeweb.png" : null;
 
   return (
-    <div className="w-full aspect-[16/10] bg-card-dark rounded-xl border border-white/[0.04] overflow-hidden relative flex flex-col group-hover:border-white/[0.12] transition-colors duration-500">
+    <div className="w-full aspect-[4/3] bg-card-dark rounded-xl border border-white/[0.04] overflow-hidden relative flex flex-col group-hover:border-white/[0.12] transition-colors duration-500">
       {/* Browser Header */}
       <div className="h-6 border-b border-white/[0.04] bg-white/[0.01] flex items-center px-3 gap-1.5 shrink-0 z-10 transition-colors duration-500 group-hover:bg-white/[0.03]">
         <div className="w-1.5 h-1.5 rounded-full bg-white/10 group-hover:bg-accent-lime/80 transition-colors duration-300" />
@@ -102,9 +112,9 @@ function ProjectPreview({ project }: { project: typeof projects[0] }) {
       
       {/* Browser Content */}
       <div className="flex-1 relative overflow-hidden bg-[#0A0A0A]">
-        {imagePath && !imgError ? (
+        {project.image && !imgError ? (
           <img 
-            src={imagePath} 
+            src={project.image} 
             alt={project.name}
             className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-700 ease-out group-hover:scale-[1.03]"
             onError={() => setImgError(true)}
@@ -132,7 +142,7 @@ export function Projects() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-8 flex items-baseline justify-between"
         >
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Selected Concepts</h2>
+          <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Selected Projects</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -150,14 +160,14 @@ export function Projects() {
               <>
                 <ProjectPreview project={project} />
                 
-                <div className="flex flex-col gap-2 h-full">
-                  <div className="flex items-center justify-between">
+                <div className="flex flex-col h-full">
+                  <div className="flex flex-col items-start gap-1.5 mb-3">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-text-muted/50 border border-white/5 bg-white/[0.02] px-2 py-0.5 rounded backdrop-blur-sm group-hover:border-white/10 transition-colors">
+                      {project.label}
+                    </span>
                     <h3 className="text-xl font-medium tracking-tight text-text-main group-hover:text-text-main transition-opacity duration-300 relative">
                       {project.name}
                     </h3>
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-text-muted/50 border border-white/5 bg-white/[0.02] px-2 py-0.5 rounded backdrop-blur-sm group-hover:border-white/10 transition-colors">
-                      Concept Project
-                    </span>
                   </div>
                   <div className="flex flex-col">
                     <p className="text-sm font-medium text-text-muted mb-1">{project.type}</p>
@@ -165,9 +175,9 @@ export function Projects() {
                       {project.desc}
                     </p>
                     {isClickable && (
-                      <div className="flex items-center mt-2">
+                      <div className="flex items-center">
                         <span className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium bg-white/[0.03] text-text-muted border border-white/10 rounded-full group-hover:bg-accent-lime group-hover:text-bg-dark group-hover:border-accent-lime transition-all duration-300">
-                          View Demo
+                          {project.cta}
                         </span>
                       </div>
                     )}
