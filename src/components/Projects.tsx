@@ -121,10 +121,11 @@ function ProjectPreview({ project }: { project: typeof projects[0] }) {
 
 export function Projects() {
   return (
-    <section id="works" className="py-12 md:py-16 relative">
+    <section className="py-12 md:py-16 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
+          id="works"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}

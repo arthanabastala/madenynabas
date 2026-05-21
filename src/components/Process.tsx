@@ -25,10 +25,11 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="py-16 md:py-24 relative">
+    <section className="py-16 md:py-24 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
+          id="process"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}

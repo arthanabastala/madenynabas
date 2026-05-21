@@ -25,10 +25,11 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-10 md:py-12 relative">
+    <section className="py-10 md:py-12 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
+          id="services"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}

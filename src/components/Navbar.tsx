@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +10,9 @@ export function Navbar() {
     setIsOpen(false);
     const target = document.getElementById(id);
     if (target) {
-      const navbarHeight = 96; // h-24 = 6rem = 96px
-      const offset = 24; 
-      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - offset;
+      const navbarHeight = 96; // h-24 = 96px
+      const extraOffset = 16;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
       window.scrollTo({
         top: targetPosition,
         behavior: "smooth"

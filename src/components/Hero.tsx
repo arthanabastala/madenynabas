@@ -1,7 +1,22 @@
+import React from "react";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const target = document.getElementById(id);
+    if (target) {
+      const navbarHeight = 96;
+      const extraOffset = 16;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-[90vh] pt-24 pb-12 overflow-x-clip flex items-center">
       <div className="mx-auto max-w-7xl px-8 w-full relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -28,6 +43,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <a
               href="#contact"
+              onClick={(e) => handleScroll(e, "contact")}
               className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-accent-lime text-bg-dark font-medium hover:bg-white transition-all duration-300 group"
             >
               Start a Project
@@ -35,6 +51,7 @@ export function Hero() {
             </a>
             <a
               href="#works"
+              onClick={(e) => handleScroll(e, "works")}
               className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-transparent border border-white/10 text-text-main font-medium hover:bg-white/5 transition-all duration-300"
             >
               View Works

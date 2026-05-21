@@ -3,10 +3,11 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-32 relative">
+    <section className="py-16 md:py-24 relative">
       <div className="mx-auto max-w-7xl px-8 flex flex-col items-center text-center">
         
         <motion.div 
+          id="contact"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
