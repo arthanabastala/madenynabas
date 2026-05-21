@@ -1,0 +1,8 @@
+{
+  "name": "Made by Nabas - Web Studio",
+  "description": "A modern, premium, clean landing page for a personal creative web studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
