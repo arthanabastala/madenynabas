@@ -92,7 +92,7 @@ function ProjectPreview({ project }: { project: typeof projects[0] }) {
   const imagePath = project.name === "ORIGINE" ? "/images/projects/origine-preview.png" : null;
 
   return (
-    <div className="w-full aspect-[4/3] bg-card-dark rounded-xl border border-white/[0.04] overflow-hidden relative flex flex-col group-hover:border-white/[0.12] transition-colors duration-500 relative">
+    <div className="w-full aspect-[16/10] bg-card-dark rounded-xl border border-white/[0.04] overflow-hidden relative flex flex-col group-hover:border-white/[0.12] transition-colors duration-500">
       {/* Browser Header */}
       <div className="h-6 border-b border-white/[0.04] bg-white/[0.01] flex items-center px-3 gap-1.5 shrink-0 z-10 transition-colors duration-500 group-hover:bg-white/[0.03]">
         <div className="w-1.5 h-1.5 rounded-full bg-white/10 group-hover:bg-accent-lime/80 transition-colors duration-300" />
@@ -121,14 +121,15 @@ function ProjectPreview({ project }: { project: typeof projects[0] }) {
 
 export function Projects() {
   return (
-    <section id="works" className="scroll-mt-24 py-12 md:py-16 relative">
+    <section id="works" className="scroll-mt-32 py-12 md:py-16 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-10 md:mb-12 flex items-baseline justify-between"
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-8 flex items-baseline justify-between"
         >
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Selected Concepts</h2>
         </motion.div>
@@ -139,16 +140,16 @@ export function Projects() {
             const cardProps = {
               initial: { opacity: 0, y: 20 },
               whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true },
-              transition: { delay: idx * 0.1 },
-              className: "group flex flex-col gap-5 h-full cursor-pointer"
+              viewport: { once: true, margin: "-50px" },
+              transition: { duration: 0.6, delay: idx * 0.1, ease: "easeOut" },
+              className: "group flex flex-col gap-4 h-full cursor-pointer"
             };
 
             const content = (
               <>
                 <ProjectPreview project={project} />
                 
-                <div className="flex flex-col gap-3 h-full">
+                <div className="flex flex-col gap-2 h-full">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-medium tracking-tight text-text-main group-hover:text-text-main transition-opacity duration-300 relative">
                       {project.name}
@@ -157,14 +158,14 @@ export function Projects() {
                       Concept Project
                     </span>
                   </div>
-                  <div className="flex flex-col flex-1">
+                  <div className="flex flex-col">
                     <p className="text-sm font-medium text-text-muted mb-1">{project.type}</p>
-                    <p className="text-sm text-text-muted/60 leading-relaxed font-light mb-5">
+                    <p className="text-sm text-text-muted/60 leading-relaxed font-light mb-4">
                       {project.desc}
                     </p>
                     {isClickable && (
-                      <div className="mt-auto flex items-center">
-                        <span className="inline-flex items-center justify-center px-4 py-2 text-xs font-medium bg-white/[0.03] text-text-muted border border-white/10 rounded-full group-hover:bg-accent-lime group-hover:text-bg-dark group-hover:border-accent-lime transition-all duration-300">
+                      <div className="flex items-center mt-2">
+                        <span className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium bg-white/[0.03] text-text-muted border border-white/10 rounded-full group-hover:bg-accent-lime group-hover:text-bg-dark group-hover:border-accent-lime transition-all duration-300">
                           View Demo
                         </span>
                       </div>

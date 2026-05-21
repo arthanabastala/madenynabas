@@ -25,14 +25,15 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="scroll-mt-24 py-16 md:py-24 relative">
+    <section id="process" className="scroll-mt-32 py-16 md:py-24 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12 md:mb-16"
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-10 md:mb-12"
         >
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight">How It Works</h2>
         </motion.div>
@@ -44,9 +45,9 @@ export function Process() {
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="flex flex-col gap-6"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
+              className="flex flex-col gap-5 h-full"
             >
               <div className="text-sm font-mono tracking-widest text-text-muted/50">
                 {step.num}

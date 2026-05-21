@@ -25,30 +25,33 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-24 py-12 md:py-16 relative">
+    <section id="services" className="scroll-mt-32 py-12 md:py-16 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-6 md:mb-8"
         >
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight">What I Do</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4 items-stretch">
           {services.map((service, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="p-6 md:p-8 rounded-2xl bg-card-dark hover:bg-white/[0.02] transition-colors duration-500 flex flex-col gap-4 group"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
+              className="p-6 md:p-8 rounded-2xl bg-card-dark hover:bg-white/[0.02] transition-colors duration-500 flex flex-col h-full min-h-[220px] group"
             >
-              <span className="text-[10px] font-mono tracking-widest text-text-muted/50 group-hover:text-accent-lime transition-colors">{service.num}</span>
-              <div>
+              <div className="mb-6 md:mb-8">
+                <span className="text-[10px] font-mono tracking-widest text-text-muted/50 group-hover:text-accent-lime transition-colors">{service.num}</span>
+              </div>
+              <div className="mt-auto">
                 <h3 className="text-xl md:text-2xl font-medium mb-2 text-text-main group-hover:opacity-90">{service.title}</h3>
                 <p className="text-sm md:text-base text-text-muted leading-relaxed font-light">{service.desc}</p>
               </div>

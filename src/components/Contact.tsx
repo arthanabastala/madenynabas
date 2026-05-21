@@ -3,21 +3,22 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="scroll-mt-24 py-20 md:py-32 relative">
+    <section id="contact" className="scroll-mt-32 py-20 md:py-32 relative">
       <div className="mx-auto max-w-7xl px-8 flex flex-col items-center text-center">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-3xl flex flex-col items-center gap-8"
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="max-w-3xl flex flex-col items-center gap-6"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">Have a project in mind?</h2>
           <p className="text-lg md:text-xl text-text-muted leading-relaxed font-light">
             Let’s build a website that makes your brand look more modern, credible, and memorable.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center sm:w-auto mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center sm:w-auto mt-6">
             <a 
               href="https://www.instagram.com/madebynabas/"
               target="_blank"
