@@ -89,7 +89,7 @@ function MockupFallback({ name }: { name: string }) {
 
 function ProjectPreview({ project }: { project: typeof projects[0] }) {
   const [imgError, setImgError] = useState(false);
-  const imagePath = project.name === "ORIGINE" ? "/images/projects/origine-preview.png" : null;
+  const imagePath = project.name === "ORIGINE" ? "/coffeweb.png" : null;
 
   return (
     <div className="w-full aspect-[16/10] bg-card-dark rounded-xl border border-white/[0.04] overflow-hidden relative flex flex-col group-hover:border-white/[0.12] transition-colors duration-500">
