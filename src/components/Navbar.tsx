@@ -6,13 +6,11 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-dark/60 backdrop-blur-xl border-b border-white/[0.04]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-dark/80 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-8">
         <div className="flex h-24 items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-            <span className="text-xl font-medium tracking-tight text-text-main scale-y-95">
-              made by <span className="text-accent-lime opacity-90">nabas</span>
-            </span>
+            <img src="/logo.png" alt="made by nabas" className="h-6 w-auto" />
           </a>
 
           {/* Desktop Nav */}

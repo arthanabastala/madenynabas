@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-40 relative border-t border-white/[0.02]">
+    <section id="contact" className="py-40 relative">
       <div className="mx-auto max-w-7xl px-8 flex flex-col items-center text-center">
         
         <motion.div 
@@ -28,13 +28,15 @@ export function Contact() {
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
             <a 
-              href="#"
+              href="https://wa.me/628568720233"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-transparent border border-white/10 flex-1 sm:flex-none hover:bg-white/5 transition-all duration-300 font-medium"
             >
               Chat on WhatsApp
             </a>
             <a 
-              href="mailto:hello@madebynabas.com"
+              href="mailto:arthanabastala@gmail.com"
               className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-transparent border border-white/10 flex-1 sm:flex-none hover:bg-white/5 transition-all duration-300 font-medium"
             >
               Email Me

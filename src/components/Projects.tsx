@@ -9,18 +9,18 @@ const projects = [
   {
     name: "FRAME",
     type: "Portfolio Website Concept",
-    desc: "A clean personal website for creators and freelancers.",
+    desc: "A clean personal website for creators, designers, and freelancers.",
   },
   {
     name: "LOCAL GOODS",
     type: "UMKM Website Concept",
-    desc: "A simple business website with modern visual direction.",
+    desc: "A simple business website with modern layout and clear product presentation.",
   }
 ];
 
 export function Projects() {
   return (
-    <section id="works" className="py-32 md:py-40 relative border-t border-white/[0.02]">
+    <section id="works" className="py-32 md:py-40 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
@@ -43,9 +43,9 @@ export function Projects() {
               className="group flex flex-col gap-6 cursor-pointer"
             >
               {/* Mockup Placeholder */}
-              <div className="w-full aspect-[4/3] rounded-2xl bg-card-dark border border-white/[0.04] overflow-hidden relative mb-2">
+              <div className="w-full aspect-[4/3] bg-card-dark overflow-hidden relative mb-4">
                 <div className="absolute inset-0 flex items-center justify-center bg-white/[0.01] group-hover:bg-white/[0.03] transition-colors duration-500">
-                  <span className="text-text-muted/40 font-mono text-xs uppercase tracking-widest">Image Placeholder</span>
+                  <span className="text-text-muted/30 font-mono text-xs uppercase tracking-widest">Image</span>
                 </div>
               </div>
               
@@ -54,13 +54,13 @@ export function Projects() {
                   <h3 className="text-xl font-medium tracking-tight text-text-main group-hover:opacity-80 transition-opacity">
                     {project.name}
                   </h3>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-text-muted">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-text-muted/50">
                     Concept
                   </span>
                 </div>
                 <div>
                   <p className="text-sm font-medium text-text-muted mb-1">{project.type}</p>
-                  <p className="text-sm text-text-muted/70 leading-relaxed font-light">
+                  <p className="text-sm text-text-muted/60 leading-relaxed font-light">
                     {project.desc}
                   </p>
                 </div>

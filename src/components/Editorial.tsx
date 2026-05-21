@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export function Editorial() {
   return (
-    <section className="py-40 relative border-t border-white/[0.02]">
+    <section className="py-40 relative">
       <div className="mx-auto max-w-7xl px-8 flex flex-col items-center text-center">
         
         <motion.div 
