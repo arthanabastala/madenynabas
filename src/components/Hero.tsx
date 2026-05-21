@@ -8,7 +8,10 @@ export function Hero() {
     const target = document.getElementById(id);
     if (target) {
       const navbarHeight = 96;
-      const extraOffset = 16;
+      let extraOffset = 16;
+      if (id === "process" || id === "contact") {
+        extraOffset = 40;
+      }
       const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
       window.scrollTo({
         top: targetPosition,
