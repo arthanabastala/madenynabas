@@ -25,7 +25,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-32 py-12 md:py-16 relative">
+    <section id="services" className="py-10 md:py-12 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
@@ -33,7 +33,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-6 md:mb-8"
+          className="mb-5 md:mb-6"
         >
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight">What I Do</h2>
         </motion.div>
@@ -46,13 +46,13 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
-              className="p-6 md:p-8 rounded-2xl bg-card-dark hover:bg-white/[0.02] transition-colors duration-500 flex flex-col h-full min-h-[220px] group"
+              className="p-5 md:p-6 rounded-2xl bg-card-dark hover:bg-white/[0.02] transition-colors duration-500 flex flex-col h-full min-h-[170px] group"
             >
-              <div className="mb-6 md:mb-8">
+              <div className="mb-4 md:mb-5">
                 <span className="text-[10px] font-mono tracking-widest text-text-muted/50 group-hover:text-accent-lime transition-colors">{service.num}</span>
               </div>
               <div className="mt-auto">
-                <h3 className="text-xl md:text-2xl font-medium mb-2 text-text-main group-hover:opacity-90">{service.title}</h3>
+                <h3 className="text-xl md:text-2xl font-medium mb-1.5 text-text-main group-hover:opacity-90">{service.title}</h3>
                 <p className="text-sm md:text-base text-text-muted leading-relaxed font-light">{service.desc}</p>
               </div>
             </motion.div>

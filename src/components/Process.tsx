@@ -25,7 +25,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="scroll-mt-32 py-16 md:py-24 relative">
+    <section id="process" className="py-16 md:py-24 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 

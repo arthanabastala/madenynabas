@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="scroll-mt-32 py-20 md:py-32 relative">
+    <section id="contact" className="py-20 md:py-32 relative">
       <div className="mx-auto max-w-7xl px-8 flex flex-col items-center text-center">
         
         <motion.div 

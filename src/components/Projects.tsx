@@ -121,7 +121,7 @@ function ProjectPreview({ project }: { project: typeof projects[0] }) {
 
 export function Projects() {
   return (
-    <section id="works" className="scroll-mt-32 py-12 md:py-16 relative">
+    <section id="works" className="py-12 md:py-16 relative">
       <div className="mx-auto max-w-7xl px-8">
         
         <motion.div 
