@@ -43,12 +43,23 @@ export function Contact() {
               Email Me
             </a>
             <a 
-              href="https://madebynabas.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#works"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.getElementById("works");
+                if (target) {
+                  const navbarHeight = 80;
+                  const extraOffset = 20;
+                  const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
+                  window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                  });
+                }
+              }}
               className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-transparent border border-white/10 flex-1 sm:flex-none hover:bg-white/5 transition-all duration-300 font-medium"
             >
-              Visit Website
+              View Projects
             </a>
           </div>
         </motion.div>

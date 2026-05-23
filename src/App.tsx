@@ -10,6 +10,7 @@ import { Services } from './components/Services';
 import { Projects } from './components/Projects';
 import { Process } from './components/Process';
 import { Editorial } from './components/Editorial';
+import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -24,6 +25,7 @@ export default function App() {
         <Projects />
         <Process />
         <Editorial />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

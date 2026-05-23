@@ -10,10 +10,10 @@ export function Navbar() {
     setIsOpen(false);
     const target = document.getElementById(id);
     if (target) {
-      const navbarHeight = 96; // h-24 = 96px
-      let extraOffset = 16;
+      const navbarHeight = 80; // adjusted navbar height
+      let extraOffset = 20; // cleaner base offset
       if (id === "process" || id === "contact") {
-        extraOffset = 40;
+        extraOffset = 24; // slight extra offset
       }
       const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
       window.scrollTo({

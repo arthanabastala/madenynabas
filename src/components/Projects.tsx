@@ -12,21 +12,21 @@ const projects = [
     cta: "View Demo"
   },
   {
-    name: "FRAME",
-    label: "Personal Project",
-    type: "Portfolio Website",
-    desc: "A clean personal portfolio website built to present profile, skills, and selected works.",
-    link: "https://nabastalaport.vercel.app/",
-    image: "/portoweb.png",
-    cta: "View Website"
-  },
-  {
     name: "MAC GLOBAL",
     label: "Live Project",
     type: "Business Website",
     desc: "A modern business website for a local brand with clean product and company presentation.",
     link: "https://macomunity.vercel.app/",
     image: "/macweb.png",
+    cta: "View Website"
+  },
+  {
+    name: "FRAME",
+    label: "Personal Project",
+    type: "Portfolio Website",
+    desc: "A clean personal portfolio website built to present profile, skills, and selected works.",
+    link: "https://nabastalaport.vercel.app/",
+    image: "/portoweb.png",
     cta: "View Website"
   }
 ];
