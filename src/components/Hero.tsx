@@ -31,16 +31,14 @@ export function Hero() {
           className="flex flex-col gap-6 lg:gap-8"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.05] tracking-tight">
-            Modern websites for brands that want to look{" "}
+            I design and build modern websites that make brands look more{" "}
             <span className="font-accent text-accent-lime text-5xl md:text-6xl lg:text-[4.5rem] mt-1 inline-block -rotate-1 opacity-90">
-              premium.
+              credible.
             </span>
           </h1>
 
           <p className="text-base md:text-lg text-text-muted max-w-lg leading-relaxed font-light mt-0">
-            I design landing pages, portfolio websites, business websites, and
-            website redesigns with clean visuals, clear structure, and modern
-            digital presence.
+            Landing pages, business websites, portfolios, and redesigns with clean structure, modern visuals, and clear direction.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -57,8 +55,13 @@ export function Hero() {
               onClick={(e) => handleScroll(e, "works")}
               className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-transparent border border-white/10 text-text-main font-medium hover:bg-white/5 transition-all duration-300"
             >
-              View Works
+              View Projects
             </a>
+          </div>
+
+          <div className="pt-4 flex items-center gap-3 text-sm text-text-muted/80">
+            <div className="w-1.5 h-1.5 rounded-full bg-accent-lime/60" />
+            <p className="font-light">Available for landing pages, website redesigns, and portfolio websites.</p>
           </div>
         </motion.div>
 

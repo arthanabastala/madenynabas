@@ -20,6 +20,11 @@ const services = [
     num: "04",
     title: "Website Redesign",
     desc: "Turn an outdated website into a cleaner and more premium digital experience."
+  },
+  {
+    num: "05",
+    title: "UI/UX Design",
+    desc: "Clean interface direction with better structure, hierarchy, and user flow."
   }
 ];
 

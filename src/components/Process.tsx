@@ -9,12 +9,12 @@ const steps = [
   {
     num: "02.",
     title: "Direction",
-    desc: "I create the visual direction, content structure, and page flow."
+    desc: "I define the visual direction, content structure, and page flow."
   },
   {
     num: "03.",
     title: "Design",
-    desc: "The website interface is designed with clean hierarchy and modern aesthetics."
+    desc: "The interface is designed with clean hierarchy and modern aesthetics."
   },
   {
     num: "04.",
@@ -36,7 +36,7 @@ export function Process() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-10 md:mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tight">How It Works</h2>
+          <h2 className="text-3xl md:text-5xl font-medium tracking-tight">A simple process from idea to launch.</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
